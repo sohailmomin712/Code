@@ -43,7 +43,6 @@ const AppendData = () => {
     const tbody = document.querySelector('tbody')
 
     TableData.forEach((elem) => {
-        elem.preventDefault()
         //    console.log(elem)
         const tr1 = document.createElement('tr')
         const td1 = document.createElement('td')
