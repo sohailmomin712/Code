@@ -1,19 +1,17 @@
 table {
-    width: fit-content;
     border-collapse: collapse;
     font-family: Arial, sans-serif;
   }
 
-  tbody {
-    width: fit-content;
-  }
 
   th,
   td {
     padding: 12px 15px;
     text-align: left;
     border: 1px solid #ddd;
-    width: fit-content;
+    width: 70px;
+    word-wrap: break-word;
+    white-space: normal;
   }
 
   th {
