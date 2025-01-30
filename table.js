@@ -43,6 +43,7 @@ const AppendData = () => {
     const tbody = document.querySelector('tbody')
 
     TableData.forEach((elem) => {
+        elem.preventDefault()
         //    console.log(elem)
         const tr1 = document.createElement('tr')
         const td1 = document.createElement('td')
@@ -58,7 +59,8 @@ const AppendData = () => {
         td5.style.border = '1px solid #add'
         td5.style.backgroundColor = 'red';
         td5.style.color = 'white';
-        td5.style.padding = '12px 15px'
+        td5.style.padding = '12px 15px';
+        td5.style.cursor = 'pointer';
 
 
         tr1.append(td1, td2, td3, td4, td5)

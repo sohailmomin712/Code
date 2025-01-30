@@ -1,79 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding Data to the Table</title>
+  </head>
+  <style>
+    table {
+      width: fit-content;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+    }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<!-- make a tabel with 4 column id name phone and email ye saab text-->
-<!-- make a fifth column to delete ye wala checkbox -->
+    tbody {
+      width: fit-content;
+    }
 
-<body>
-    <table border="1px solid">
-        <thead>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Phone Number</th>
-            <th>Email</th>
-        </thead>
+    th,
+    td {
+      padding: 12px 15px;
+      text-align: left;
+      border: 1px solid #ddd;
+      width: fit-content;
+    }
+
+    th {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #ddd;
+    }
+
+    tr:last-child td {
+      border-bottom: 2px solid #4caf50;
+    }
+  </style>
+
+  <body>
+    <table>
+      <!-- the heading of the table -->
+      <thead>
+        <!--the heading row of the table-->
+        <tr>
+          <!--heading name in the row-->
+          <th>Roll No</th>
+          <th>Name</th>
+          <th>Phone No</th>
+          <th>Email</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <!--The tbody contains the tr and td inside it-->
+      <tbody></tbody>
     </table>
-
-</body>
-
+  </body>
 </html>
-
-<script>
-    const Data = [{
-        id: 1,
-        name: 'sohail',
-        phone: 123,
-        email: 'sohai@gmail.com',
-        isDelete: false
-    },
-    {
-        id: 1,
-        name: 'sohail',
-        phone: 123,
-        email: 'sohai@gmail.com',
-        isDelete: false
-    },
-    {
-        id: 1,
-        name: 'sohail',
-        phone: 123,
-        email: 'sohai@gmail.com',
-        isDelete: false
-    },
-    {
-        id: 1,
-        name: 'sohail',
-        phone: 123,
-        email: 'sohai@gmail.com',
-        isDelete: false
-    }
-    ]
-    const AppendData = () => {
-        const body = document.querySelector('body');
-        const Table = document.querySelector('table');
-        const TableRow = document.createElement('tr');
-        const TableBody = document.createElement('tbody');
-
-        Data.forEach((elem) => {
-            const Td1 = document.createElement('td');
-            Td1.textContent = elem.id
-            const Td2 = document.createElement('td');
-            Td2.textContent = elem.name;
-            const Td3 = document.createElement('td');
-            Td3.textContent = elem.phone;
-            const Td4 = document.createElement('td');
-            Td4.textContent = elem.email;
-            TableRow.append(Td1, Td2, Td3, Td4)
-            TableBody.append(TableRow)
-            Table.append(TableBody)
-            body.append(Table)
-        })
-    }
-    AppendData()
-</script>
+<script src="./table.js"></script>
