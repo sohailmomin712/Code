@@ -25,7 +25,8 @@ const AppendData = () => {
     td5.style.padding = "12px 15px";
     td5.style.cursor = "pointer";
     td5.style.width = '100%'
-    td1.style.fontFamily = 'Arial, sans-serif;'
+    td5.style.fontFamily = 'Arial, sans-serif;'
+  
     td5.onclick = () => DeleteData(elem, index);
 
     tr1.append(td1, td2, td3, td4, td5);
