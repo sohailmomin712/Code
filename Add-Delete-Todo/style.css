@@ -1,25 +1,46 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .main-container {
-    height: 60vh;
-    background-color: rgb(26, 26, 184);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 60vh;
+  background-color: rgb(26, 26, 184);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sub-container {
-    height: 400px;
-    border: 2px solid red;
-    background-color: white;
-    width: 400px;
-    padding: 10px;
+  height: 400px;
+  background-color: white;
+  width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(65, 65, 238);
 }
-.sub-container .input{
-    display: flex;
-    justify-content: space-between;
+
+.sub-container .input-box {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sub-container .input-box input {
+  border: 2px solid blue;
+  text-align: left;
+  padding: 8px;
+  width: 80%;
+  border-radius: 5px;
+}
+.sub-container .input-box button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: rgb(65, 65, 238);
+  color: white;
+}
+
+.sub-container .input-box button:hover {
+  cursor: pointer;
 }
