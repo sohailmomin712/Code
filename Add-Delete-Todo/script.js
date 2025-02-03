@@ -27,9 +27,9 @@ const AppendTask = () => {
     IconDiv.classList.add("icon-div");
     
     let EditIcon = document.createElement("i");
-    EditIcon.classList.add("fa", "fa-edit");
+    EditIcon.classList.add("fa-sharp", "fa-solid", "fa-pen");
     EditIcon.style.cursor = "pointer";
-    
+
     let DeleteIcon = document.createElement("i");
     DeleteIcon.classList.add("fa-regular", "fa-trash-can");
     DeleteIcon.style.cursor = "pointer";
