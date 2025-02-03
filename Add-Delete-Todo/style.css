@@ -34,6 +34,7 @@
   width: 80%;
   border-radius: 5px;
 }
+
 .sub-container .input-box button {
   padding: 10px 15px;
   border-radius: 5px;
@@ -43,4 +44,31 @@
 
 .sub-container .input-box button:hover {
   cursor: pointer;
+}
+
+#taskList {
+  margin-top: 50px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+}
+
+.task-row {
+  padding: 10px;
+  background-color: rgb(11, 169, 221);
+  border: 2px white;
+  height: 40px;
+  border-radius: 5px;
+}
+.task-content {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.icon-div {
+  display: flex;
+  gap: 10px; 
 }

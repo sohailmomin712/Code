@@ -16,9 +16,35 @@ const AppendTask = () => {
   TaskArray.forEach((task, index) => {
     // console.log(task)
     // console.log(index)
-    let li = document.createElement("li");
-    li.textContent = index + 1 + ". " + task;
-    taskList.appendChild(li);
+    let TaskDiv = document.createElement("div"); //main div for task row//
+    TaskDiv.classList.add("task-row"); //class for styling//
+    
+    let TaskContentDiv = document.createElement("div"); //inner div for single task//
+    TaskContentDiv.textContent = task;
+    TaskContentDiv.classList.add("task-content");
+    
+    let IconDiv = document.createElement("div");
+    IconDiv.classList.add("icon-div");
+    
+    let EditIcon = document.createElement("i");
+    EditIcon.classList.add("fa", "fa-edit");
+    EditIcon.style.cursor = "pointer";
+    
+    let DeleteIcon = document.createElement("i");
+    DeleteIcon.classList.add("fa-regular", "fa-trash-can");
+    DeleteIcon.style.cursor = "pointer";
+    
+
+    IconDiv.appendChild(EditIcon);
+    IconDiv.appendChild(DeleteIcon);
+    
+ 
+    TaskContentDiv.appendChild(IconDiv);
+    TaskDiv.appendChild(TaskContentDiv);
+    
+
+    taskList.appendChild(TaskDiv);
+    
   });
   const TotalTaskData = JSON.stringify(TaskArray);
   localStorage.setItem("TaskData", TotalTaskData);
