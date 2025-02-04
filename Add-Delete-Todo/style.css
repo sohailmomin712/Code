@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -54,8 +54,9 @@
   gap: 5px;
 }
 
+
 .task-row {
-  padding: 8px 8px;
+  padding: 6px;
   background-color: rgb(149, 204, 221);
   border: 2px white;
   height: 40px;
@@ -77,6 +78,29 @@
 .icon-div i {
   background-color: blue;
   color: white;
+  border-radius: 5px;
   padding: 5px;
+}
+
+
+/* .task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d8e8e5;
+  padding: 10px;
+  margin: 5px 0;
   border-radius: 5px;
 }
+
+.task-content {
+  flex: 1;
+  padding: 5px;
+}
+
+.icon-div i {
+  color: white;
+  background-color: #3b5998;
+  padding: 8px;
+  border-radius: 5px;
+} */ 
