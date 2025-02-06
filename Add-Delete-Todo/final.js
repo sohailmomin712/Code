@@ -31,6 +31,8 @@ const RenderTasks = () => {
   TaskLists.innerHTML = ""; //Clear previous tasks to prevent duplication
 
   TaskArr.forEach((task, index) => {
+    const div=document.createElement('div')
+    div.style.display='flex'
     const singleTask = document.createElement("p");
     singleTask.classList.add("single-task");
     singleTask.textContent = task;
@@ -47,9 +49,10 @@ const RenderTasks = () => {
 
     SpanIcons.appendChild(EditIcon);
     SpanIcons.appendChild(DeleteIcon);
-    singleTask.appendChild(SpanIcons);
+    // singleTask.appendChild(SpanIcons);
 
-    TaskLists.appendChild(singleTask);
+    div.append(singleTask,SpanIcons);
+    TaskLists.append(div)
 
     localStorage.setItem("TaskData", JSON.stringify(TaskArr));
   });

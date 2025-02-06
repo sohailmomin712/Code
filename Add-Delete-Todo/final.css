@@ -46,9 +46,9 @@ body {
 }
 
 #append-task-list p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 275px;
+    word-wrap: break-word;
+    height: fit-content;
 }
 
 #append-task-list p span {
